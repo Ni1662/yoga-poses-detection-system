@@ -8,7 +8,6 @@ export default function Signup() {
   // initial state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [register, setRegister] = useState(false);
 
   const handleSubmit = (e) => {
     // prevent the form from refreshing the whole page
@@ -27,7 +26,6 @@ export default function Signup() {
     // make the API call
     axios(configuration)
       .then((result) => {
-        setRegister(true);
       })
       .catch((error) => {
         error = new Error();
@@ -36,8 +34,10 @@ export default function Signup() {
 
   return (
     <div className="signup-box">
-      <h2>Sign up</h2>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <div className="inner-box">
+
+      <h2 className="heading">Sign up</h2>
+      <Form onSubmit={(e) => handleSubmit(e)} className="form">
         {/* email */}
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -75,13 +75,9 @@ export default function Signup() {
           Already registered <a href="/login">Login</a>
         </p>
 
-        {/* display success message */}
-        {register ? (
-          <p className="text-success">You Are Registered Successfully</p>
-        ) : (
-          <p className="text-danger">You Are Not Registered</p>
-        )}
+        
       </Form>
+      </div>
     </div>
   );
 }
