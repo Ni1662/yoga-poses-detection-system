@@ -2,9 +2,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  useNavigate,
-  Navigate,
+  Routes
 } from "react-router-dom";
 
 import Home from "./pages/Home/Home";

@@ -11,20 +11,23 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="home-header">
-        <h1 className="home-heading">YogaIntelliJ</h1>
-        <Link to="/about">
-          <button className="btn btn-secondary" id="about-btn">
-            About
-          </button>
-        </Link>
-        <Link to="/login">
-          <button className="btn btn-secondary" id="about-btn">
-            Login
-          </button>
-        </Link>
+        <h1 className="home-heading">YogiK</h1>
+        <div>
+          <Link to="/about">
+            <button className="btn btn-secondary" id="about-btn">
+              About
+            </button>
+          </Link>
+          <Link to="/login">
+            <button className="btn btn-secondary" id="about-btn">
+              Login
+            </button>
+          </Link>
+        </div>
       </div>
 
       <h1 className="description">A Yoga AI Trainer</h1>
+      <p className="desc">An artificial intelligence yoga guide!!</p>
       <div className="home-main">
         <div className="btn-section">
           {token ? (

@@ -14,7 +14,6 @@ import { poseImages } from '../../utils/pose_images';
 import { POINTS, keypointConnections } from '../../utils/data';
 import { drawPoint, drawSegment } from '../../utils/helper'
 
-import { Button } from "react-bootstrap";
 import axios from "axios";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
@@ -40,6 +39,7 @@ let flag = false
 function Yoga() {
 
   // set an initial state for the message we will receive after the API call
+  // eslint-disable-next-line
   const [message, setMessage] = useState("");
 
   // useEffect automatically executes once the page is fully loaded
